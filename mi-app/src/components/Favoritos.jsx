@@ -7,7 +7,7 @@ import Favorito from './Favorito'
 const Favoritos = (props) => {
   const { favoritos, setFavoritos } = useContext(FavoritosContext)
 
-  console.log('favoritos tiene: ', favoritos)
+  console.log('tus favoritos: ', favoritos)
 
   return (
     <div className='margengrande bottom'>
@@ -25,7 +25,7 @@ const Favoritos = (props) => {
         )) : favoritos.length === 1 ? (
           <>
             <section className='creacion'>
-              <h1>HOLA MUNDO</h1>
+              <h1>Tus Favoritos</h1>
               <p>{favoritos[0].id}</p>
               <p>{favoritos[0].nombre}</p>
               <p>{favoritos[0].descripcion}</p>

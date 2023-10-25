@@ -1,0 +1,4 @@
+
+            <video autoPlay loop muted className="background-video">
+                <source src={videoSource} type="video/mp4" />
+            </video>

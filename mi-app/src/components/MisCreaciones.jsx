@@ -28,7 +28,9 @@ const MisCreaciones = (props) => {
           <p>{creacion.descripcion}</p>
           <p>{creacion.leguaje}</p>
           <p>{creacion.fecha}</p>
-          <p>{creacion.respositorio}</p>
+          <a href={creacion.respositorio} style={{ textDecoration: 'none', color: 'white' }} target="_blank" rel="noopener noreferrer">
+            {creacion.respositorio}
+          </a>
           <Favorito id={creaciones.id}/>
         </section>
       ))}

@@ -65,3 +65,30 @@ footer {
     align-content: flex-start;
     justify-content:left;
 }
+
+/* Estilos para la barra de navegación (navbar) */
+.navbar {
+    background-color: black;
+  }
+  
+  /* Estilos para el texto dentro de la barra de navegación */
+  .navbar a {
+    color: white;
+  }
+  
+  /* Estilos para los iconos dentro de la barra de navegación */
+  .navbar svg {
+    fill: white; /* Cambia el color de relleno de los iconos (para iconos SVG) */
+  }
+  
+  /* Estilos para el pie de página (footer) */
+  footer {
+    background-color: rgb(35, 35, 35);
+    color: white;
+  }
+  
+  /* Estilos para los iconos dentro del pie de página */
+  footer svg {
+    fill: white; /* Cambia el color de relleno de los iconos (para iconos SVG) */
+  }
+  
