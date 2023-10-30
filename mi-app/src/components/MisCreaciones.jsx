@@ -23,10 +23,10 @@ const MisCreaciones = (props) => {
       <h1>Todos mis proyectos</h1>
       {obtenerPosiciones().map((creacion) => (
         <section className='creacion' key={creacion.id}>
-          <p>{creacion.id}</p>
-          <p>{creacion.nombre}</p>
+          <p>Mi proyecto N° {creacion.id}</p>
+          <h1>{creacion.nombre}</h1>
           <p>{creacion.descripcion}</p>
-          <p>{creacion.leguaje}</p>
+          <p>Lenguaje/s usado/s: {creacion.leguaje}</p>
           <p>{creacion.fecha}</p>
           <a href={creacion.respositorio} style={{ textDecoration: 'none', color: 'white' }} target="_blank" rel="noopener noreferrer">
             {creacion.respositorio}
@@ -36,9 +36,9 @@ const MisCreaciones = (props) => {
       ))}
 
       <div className="paginacion">
-        <button onClick={() => cambiarPagina(paginaActual - 1)} disabled={paginaActual === 1}>Anterior</button>
-        <span>Página {paginaActual}</span>
-        <button onClick={() => cambiarPagina(paginaActual + 1)} disabled={paginaActual * elementosPorPagina >= creaciones.length}>Siguiente</button>
+        <button type="button" class="btn btn-light" onClick={() => cambiarPagina(paginaActual - 1)} disabled={paginaActual === 1}>Anterior</button>
+        <span>pag. {paginaActual}</span>
+        <button type="button" class="btn btn-light" onClick={() => cambiarPagina(paginaActual + 1)} disabled={paginaActual * elementosPorPagina >= creaciones.length}>Siguiente</button>
       </div>
     </div>
   )

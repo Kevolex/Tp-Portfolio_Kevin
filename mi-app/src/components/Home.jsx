@@ -15,12 +15,12 @@ const Home = (props) => {
         </section>
         {creaciones.slice(0, 6).map((creaciones) => 
             <section className='creacion' key={creaciones.id}>
-                <p>{creaciones.id}</p>
-                <p>{creaciones.nombre}</p>
+                <p>Mi proyecto N° {creaciones.id}</p>
+                <h2 className='creacionProyecto'><b>{creaciones.nombre}</b></h2>
                 <p>{creaciones.descripcion}</p>
-                <p>{creaciones.leguaje}</p>
+                <p>Lenguaje/s usado/s: {creaciones.leguaje}</p>
                 <p>{creaciones.fecha}</p>
-                <p>{creaciones.respositorio}</p>
+                <a className='linkRepositorio' href={creaciones.respositorio} target="_blank">{creaciones.respositorio}</a>
                 <Favorito id={creaciones.id}/>
             </section>
         )}
