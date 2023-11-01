@@ -20,7 +20,7 @@ const Home = (props) => {
                 <p>{creaciones.descripcion}</p>
                 <p>Lenguaje/s usado/s: {creaciones.leguaje}</p>
                 <p>{creaciones.fecha}</p>
-                <a className='linkRepositorio' href={creaciones.respositorio} target="_blank">{creaciones.respositorio}</a>
+                <a  style={{ textDecoration: 'none', color: 'white'}} href={creaciones.respositorio} target="_blank" rel="noopener noreferrer">{creaciones.respositorio}</a>
                 <Favorito id={creaciones.id}/>
             </section>
         )}

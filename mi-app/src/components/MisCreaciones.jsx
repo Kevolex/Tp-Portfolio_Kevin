@@ -24,14 +24,14 @@ const MisCreaciones = (props) => {
       {obtenerPosiciones().map((creacion) => (
         <section className='creacion' key={creacion.id}>
           <p>Mi proyecto N° {creacion.id}</p>
-          <h1>{creacion.nombre}</h1>
+          <h2>{creacion.nombre}</h2>
           <p>{creacion.descripcion}</p>
           <p>Lenguaje/s usado/s: {creacion.leguaje}</p>
           <p>{creacion.fecha}</p>
           <a href={creacion.respositorio} style={{ textDecoration: 'none', color: 'white' }} target="_blank" rel="noopener noreferrer">
             {creacion.respositorio}
           </a>
-          <Favorito id={creaciones.id}/>
+          <Favorito id={creacion.id}/>
         </section>
       ))}
 

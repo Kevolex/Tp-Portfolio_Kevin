@@ -10,30 +10,30 @@ const Favoritos = (props) => {
   console.log('tus favoritos: ', favoritos)
 
   return (
-    <div className='margengrande bottom'>
-      {favoritos.length > 1 ? (
+    <div className='margengrande bottom'>   
+      <h1>Favoritos</h1>
+      {favoritos.length > 0 ? (
         favoritos.map((favoritos) =>
-          <section className='creacion' key={favoritos.id}>
-            <p>{favoritos.id}</p>
-            <p>{favoritos.nombre}</p>
-            <p>{favoritos.descripcion}</p>
-            <p>{favoritos.leguaje}</p>
-            <p>{favoritos.fecha}</p>
-            <p>{favoritos.respositorio}</p>
-            <Favorito id={favoritos.id} />
-          </section>
+        <section className='creacion' key={favoritos.id}>
+        <p>Mi proyecto N° {favoritos.id}</p>
+        <h2 className='creacionProyecto'><b>{favoritos.nombre}</b></h2>
+        <p>{favoritos.descripcion}</p>
+        <p>Lenguaje/s usado/s: {favoritos.leguaje}</p>
+        <p>{favoritos.fecha}</p>
+        <a  style={{ textDecoration: 'none', color: 'white'}} href={favoritos.respositorio} target="_blank" rel="noopener noreferrer">{favoritos.respositorio}</a>
+        <Favorito id={favoritos.id}/>
+    </section>
         )) : favoritos.length === 1 ? (
           <>
-            <section className='creacion'>
-              <h1>Tus Favoritos</h1>
-              <p>{favoritos[0].id}</p>
-              <p>{favoritos[0].nombre}</p>
-              <p>{favoritos[0].descripcion}</p>
-              <p>{favoritos[0].leguaje}</p>
-              <p>{favoritos[0].fecha}</p>
-              <p>{favoritos[0].respositorio}</p>
-              <Favorito id={favoritos[0].id} />
-            </section>
+            <section className='creacion' key={favoritos.id}>
+        <p>Mi proyecto N° {favoritos.id}</p>
+        <h2 className='creacionProyecto'><b>{favoritos.nombre}</b></h2>
+        <p>{favoritos.descripcion}</p>
+        <p>Lenguaje/s usado/s: {favoritos.leguaje}</p>
+        <p>{favoritos.fecha}</p>
+        <a  style={{ textDecoration: 'none', color: 'white'}} href={favoritos.respositorio} target="_blank" rel="noopener noreferrer">{favoritos.respositorio}</a>
+        <Favorito id={favoritos.id}/>
+    </section>
           </>) : (
         <><h1>No hay elementos</h1></>
       )
